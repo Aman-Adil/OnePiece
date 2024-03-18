@@ -1,0 +1,18 @@
+import time
+choice=int(input("whts ur number of choice "))
+def function(choice):
+
+   for num in range (0, choice):
+      time.sleep(1) 
+      if(num%3==0 and num%5==0):
+        print("fizzbuzz")
+      elif (num % 3 == 0):
+       print("fizz")
+      elif (num %5==0):
+       print("buzz")
+      else:
+       print(num)
+
+print("running the programm..please wait")
+time.sleep(5) 
+function(choice)
