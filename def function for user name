@@ -1,0 +1,7 @@
+import time
+name=input("whats ur name ")
+def function(name):
+  print(f"hello {name}")
+print("gathering ur name info..")
+time.sleep(2)
+function(name)
