@@ -1,0 +1,12 @@
+import random
+print("Welcome to Hangman!")
+wordslist =["hacker", "bounty", "random"]
+secretword=random.choice(wordslist)
+guess=input("guess a letter").lower()
+for letters in secretword:
+  if letters == guess:
+    print("right")
+  else:
+    print("wrong")
+
+
