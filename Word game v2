@@ -1,0 +1,30 @@
+import random
+print("Welcome to Hangman!")
+wordslist =["hacker", "bounty", "random"]
+store=[]
+secretword=random.choice(wordslist)
+for letter in secretword:
+  store+="_"
+print(store)
+print(secretword)
+gameover= False
+while not gameover:   
+  guess=input("guess a letter..").lower()
+  for position in range(len(secretword)):
+    letters=secretword[position]
+    if letters==guess:
+      store[position]=guess
+      print(store)
+
+
+  
+  
+
+
+
+
+  
+  
+
+
+
