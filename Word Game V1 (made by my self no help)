@@ -1,0 +1,15 @@
+import random
+print("welcome  to hangman game")
+wordslist=["hacker", "bounty","random"]
+secretword=random.choice(wordslist)
+store=[]
+for lett in secretword:
+  store+="_"
+print(store)
+guess=input("guess a letter").lower()
+for position in range(len(store)):
+  letter=secretword[position]
+  if letter==guess:
+    store[position]=guess
+print(store)
+  
