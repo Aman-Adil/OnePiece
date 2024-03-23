@@ -9,7 +9,7 @@ for lett in secretword:
 print(store)
 gameover=False
 while not gameover:
-  guess=input("guess a letter")
+  guess=input("guess a letter").lower()
   for position in range(len(secretword)):
     letter=secretword[position]
     if letter == guess: 
