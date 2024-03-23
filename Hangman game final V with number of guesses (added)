@@ -1,0 +1,29 @@
+num=0
+import random
+print("Welcome to Hangman!")
+wordslist=["random","hacker","bounty"]
+secretword=random.choice(wordslist)
+print(secretword)
+store=[]
+for lett in secretword:
+  store+="_"
+print(store)
+print ("u got 5 guesses")
+gameover=False
+while not gameover:
+  guess=input("guess a letter\n")
+  for position in range(len(secretword)):
+    letter=secretword[position]
+    if letter == guess: 
+      store[position]=guess
+      print(store)
+  if guess not in secretword:
+    num+=1
+    guesses_left = 5 - num
+    print(f"oops..you have {guesses_left} guesses left\n")
+  if num>=5:
+    print("uve used up all the guesses")
+    gameover=True 
+  if"_" not in store:
+    print("uve won")
+    gameover = True
